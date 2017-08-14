@@ -18,7 +18,7 @@
 #define RT2880_UART2	0x0D00  /* UART Lite */
 #define RT2880_UART3	0x0E00  /* UART Lite */
 //#define CFG_RT2880_CONSOLE	RT2880_UART1
-#define CFG_RT2880_CONSOLE	RT2880_UART3
+#define CFG_RT2880_CONSOLE	RT2880_UART1
 #else
 #define RT2880_UART1	0x0500
 #define RT2880_UART2	0x0C00  /* UART Lite */
@@ -111,9 +111,9 @@
 #define LSR_PE		(1 << 2)	/* Parity Error */
 #define LSR_OE		(1 << 1)	/* Overrun Error */
 #define LSR_DR		(1 << 0)	/* Data Ready */
-                                                                  
 
-#if defined (RT6855A_FPGA_BOARD) || defined (RT6855A_ASIC_BOARD) 
+
+#if defined (RT6855A_FPGA_BOARD) || defined (RT6855A_ASIC_BOARD)
 #define CR_UART_RBR	(0x00+RALINK_UART_LITE_BASE)
 #define CR_UART_THR	(0x00+RALINK_UART_LITE_BASE)
 #define CR_UART_IER	(0x04+RALINK_UART_LITE_BASE)
